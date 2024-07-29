@@ -1,21 +1,21 @@
-import { Inter } from "next/font/google";
-import "./globals.css";
-import Navbar from "../components/Navbar";
+import Navbar from '@/components/Navbar'
+import '@/app/globals.css'
+import { Gabarito } from 'next/font/google'
 
-const inter = Inter({ subsets: ["latin"] });
+const gabarito = Gabarito({ subsets: ['latin'] })
 
 export const metadata = {
-  title: "AnimeList",
-  description: "Anime Indonesia",
-};
+  title: 'CuyAnimeList',
+  description: 'Website Anime Indonesia',
+}
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className} suppressHydrationWarning={true}> 
-        <Navbar/>
+      <body className={`${gabarito.className} bg-color-dark`} suppressHydrationWarning={true}>
+        <Navbar />
         {children}
       </body>
     </html>
-  );
+  )
 }

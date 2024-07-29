@@ -7,10 +7,6 @@ const Page = async () => {
   );
   const topAnime = await response.json();
 
-  if (!topAnime || !topAnime.data) {
-    return <div>Loading...</div>;
-  }
-
   return (
     <>
       <section>
